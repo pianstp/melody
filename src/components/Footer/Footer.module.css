@@ -1,0 +1,138 @@
+/* ===== Footer ===== */
+.footer {
+  background: var(--color-text);
+  color: rgba(255,255,255,0.7);
+  padding: 3rem 0 2rem;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.brand {}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: -0.5px;
+}
+
+.logoAccent { color: var(--color-primary); }
+
+.tagline {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.4);
+  margin-top: 4px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.navLink {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.6);
+  transition: color var(--transition-base);
+  white-space: nowrap;
+}
+
+.navLink:hover { color: var(--color-primary); }
+
+.socials {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.socialLink {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-md);
+  color: rgba(255,255,255,0.5);
+  transition: all var(--transition-base);
+}
+
+.socialLink:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.copy {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+}
+
+.madeWith {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+}
+
+.heart { color: var(--color-primary); }
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+   ═══════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+  .navLinks { gap: 1rem; }
+}
+
+@media (max-width: 500px) {
+  .footer   { padding: 2.5rem 0 1.5rem; }
+  .bottom   { flex-direction: column; align-items: flex-start; }
+  .navLinks { gap: 0.75rem; }
+  .navLink  { font-size: 0.82rem; }
+}
+
+@media (max-width: 380px) {
+  .navLinks {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .navLinks {
+    grid-template-columns: repeat(2, auto);
+  }
+  .bottom { gap: 0.35rem; }
+  .copy, .madeWith { font-size: 0.72rem; }
+}

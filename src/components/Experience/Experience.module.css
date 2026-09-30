@@ -1,0 +1,287 @@
+/* ===== Experience Section ===== */
+.section {
+  padding: 5rem 0;
+  background: var(--color-bg-alt);
+}
+
+.header { margin-bottom: 3rem; }
+
+.sectionLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.sectionLabel::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-primary);
+  border-radius: 2px;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+/* ── Timeline ── */
+.timeline {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-primary), var(--color-amber), var(--color-accent));
+  border-radius: 2px;
+}
+
+.entry {
+  position: relative;
+  padding: 0 0 2.5rem 2rem;
+}
+
+.entry:last-child { padding-bottom: 0; }
+
+.dot {
+  position: absolute;
+  left: -2.5rem;
+  top: 4px;
+  width: 20px;
+  height: 20px;
+  background: var(--color-surface);
+  border: 2.5px solid var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-base), box-shadow var(--transition-base);
+}
+
+.dotInner {
+  width: 8px;
+  height: 8px;
+  background: var(--color-primary);
+  border-radius: 50%;
+}
+
+.entry:hover .dot {
+  background: var(--color-primary);
+  box-shadow: 0 0 0 5px rgba(192, 98, 47, 0.15);
+}
+
+.entry:hover .dotInner { background: #fff; }
+
+/* ── Card ── */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.card:hover {
+  border-color: rgba(192, 98, 47, 0.4);
+  box-shadow: var(--shadow-md);
+  transform: translateX(4px);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.role {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.period {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: rgba(192, 98, 47, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.company {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.company::before {
+  content: '•';
+  color: var(--color-amber);
+}
+
+.bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bullet {
+  font-size: 0.865rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  display: flex;
+  gap: 0.65rem;
+}
+
+.bullet::before {
+  content: '→';
+  color: var(--color-primary);
+  flex-shrink: 0;
+  font-weight: 700;
+  margin-top: 1px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-alt);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+}
+
+/* ── Education + Certs ── */
+.extraGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.extraCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+.extraCardTitle {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.eduDeg {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.eduSch {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 3px;
+}
+
+.certList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.certItem {
+  font-size: 0.83rem;
+  color: var(--color-text-muted);
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.certItem::before {
+  content: '🏅';
+  position: absolute;
+  left: 0;
+  font-size: 0.8rem;
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+   ═══════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .extraGrid { grid-template-columns: 1fr; }
+  .timeline  { padding-left: 2rem; }
+  .entry     { padding-left: 1.75rem; }
+  .dot       { left: -2rem; }
+}
+
+@media (max-width: 600px) {
+  .section   { padding: 4rem 0; }
+  .timeline  { padding-left: 1.75rem; }
+  .entry     { padding: 0 0 2rem 1.5rem; }
+  .dot       { left: -1.75rem; width: 18px; height: 18px; }
+  .dotInner  { width: 6px; height: 6px; }
+  .card      { padding: 1.25rem; }
+  .card:hover { transform: none; } /* avoid side-scroll on mobile */
+  .role      { font-size: 0.95rem; }
+  .bullet    { font-size: 0.825rem; }
+}
+
+@media (max-width: 400px) {
+  .period    { font-size: 0.7rem; padding: 0.2rem 0.6rem; }
+  .cardHeader { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 340px) {
+  .timeline  { padding-left: 1.5rem; }
+  .entry     { padding: 0 0 1.75rem 1.25rem; }
+  .dot       { left: -1.5rem; width: 16px; height: 16px; }
+  .card      { padding: 1rem; }
+  .bullet    { font-size: 0.8rem; }
+}
